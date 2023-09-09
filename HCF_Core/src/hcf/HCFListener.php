@@ -12,19 +12,16 @@ use pocketmine\player\Player;
 
 use pocketmine\event\player\{PlayerCreationEvent, PlayerJoinEvent, PlayerQuitEvent};
 
-final class HCFListener extends Listener {
+final class HCFListener implements Listener {
   
-  /**
-   * @priority HIGH onCreateEvent $event
-   **/
-   public function onCreateEvent(PlayerCreationEvent $event) : void {
-     $event->setPlayerClass(Session::class);
+   public function onCreateEvent(PlayerCreationEvent $event) : void {     
+$event->setPlayerClass(Session::class);
    }
    
    public function onJoin(PlayerJoinEvent $event) : void {
      $player = $event->getPlayer();
      if ($player instanceof Session){
-       if (!$player->isTimer()){
+       if ($player->isTimer()){
          return;
        }
        $player->setTimer(true);
