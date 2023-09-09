@@ -12,5 +12,10 @@ final class HCFUtils {
     $text = TextFormat::colorize($message);
     return Server::getInstance()->broadcastMessage($text);
   }
+  
+  public static function hasCooldown(String $type) : string {
+    $type = [];
+    return $type;
+  }
 }
 ?>

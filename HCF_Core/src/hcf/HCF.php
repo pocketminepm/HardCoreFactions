@@ -26,6 +26,10 @@ class HCF extends PluginBase {
   protected function onDisable() : void {
     
   }
+  
+  #[Pure] public static function getScoreboard() : Scoreboard {
+		return new Scoreboard();
+	}
 }
 
 ?>
