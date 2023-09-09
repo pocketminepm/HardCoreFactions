@@ -10,7 +10,7 @@ final class HCFUtils {
   
   public static function broadcaste(String $message) : string {
     $text = TextFormat::colorize($message);
-    return Server::getInstance()->broadcasteMessage($text);
+    return Server::getInstance()->broadcastMessage($text);
   }
 }
 ?>
