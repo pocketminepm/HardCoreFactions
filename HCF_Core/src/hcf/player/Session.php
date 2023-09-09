@@ -5,8 +5,10 @@ namespace hcf\player;
 use pocketmine\player\Player;
 use pocketmine\network\mcpe\NetworkSession;
 use pocketmine\player\PlayerInfo;
+use pocketmine\Server;
+use pocketmine\entity\Location;
 
-class Session extends Plugin {
+class Session extends Player {
   
   private bool $pvptimer = false;
   
