@@ -1,0 +1,11 @@
+name: HCF
+api: [5.0.0]
+version: 1.0.0
+author: "Lilith"
+main: hcf\HCF
+
+permission:
+  user.permission:
+    default: true
+    description: "User"
+    
